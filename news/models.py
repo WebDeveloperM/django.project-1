@@ -8,10 +8,10 @@ from django.db import models
 
 # Kurslar modeli
 class Course(models.Model):
-    title = models.CharField(max_length=200)
-    description = models.TextField()
-    price = models.IntegerField()
-    durations = models.IntegerField()
+    name = models.CharField(max_length=200)
+    tarif = models.TextField()
+    narx = models.IntegerField()
+    davomiyligi = models.IntegerField()
 
     def __str__(self):
         return self.name

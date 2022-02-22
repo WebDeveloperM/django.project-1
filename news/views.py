@@ -5,9 +5,14 @@ from news.models import Course
 # Create your views here.
 
 
+# home funksiyasi
+
 def home(request):
     courses = Course.objects.all()
     return render(request, 'home.html', {'kurslar': courses})
 
-
+# about_detail funksiyasi
+def about_detail(request, pk):
+    course = Course.objects.get(pk=pk)
+    return render(request, 'about_detail.html', {'course': course})
 

@@ -11,10 +11,3 @@ class Course(models.Model):
     def __str__(self):
         return self.name
         
-
-class News(models.Model):
-    title = models.CharField(max_length=250)
-    tarif = models.TextField()
-
-    def __str__(self):
-        return self.title

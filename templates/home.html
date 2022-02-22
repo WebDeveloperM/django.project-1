@@ -19,7 +19,7 @@
                         <div class="card-content">
                             <div class="media">
                                 <div class="media-content has-text-centered">
-                                    <p class="title is-4">{{ course.name }}</p>
+                                    <a href="{% url 'about_detail' course.id %}"><p class="title is-4">{{ course.name }}</p></a>
                                 </div>
                             </div>
                             <div class="content">{{ course.tarif }}</div>

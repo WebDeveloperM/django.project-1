@@ -8,7 +8,6 @@
         <div class="columns">
             {% for course in kurslar %}
             <div class="column course">
-                <a href="">
                     <div class="card">
                         <div class="card-image pt-4">
                             <figure class="image ">
@@ -25,12 +24,47 @@
                             <div class="content">{{ course.tarif }}</div>
                         </div>
                     </div>
-                </a>
-
             </div>
             {% endfor %}
         </div>
     </div>
 </section>
 
+<section id="teachers" class="section grey-bg team is-medium">
+    <div class="container">
+        <div class="has-text-centered">
+            <h1 class="title is-2">Наши Наставники</h1>
+            <h2 class="subtitle has-text-grey">Мы собрали лучших специалистов в своей отрасли</h2>
+        </div>
+        <br><br>
+        <div class="columns">
+            {% for teacher in teachers %}
+
+            <div class="column">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-square">
+                            <img   src="{{ teacher.image.url }}" alt="{{teacher.full_name}}">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content has-text-centered">
+                                <p class="title is-4">{{teacher.full_name}}</p>
+                                <p class="subtitle is-6">{{teacher.teaching_course}}</p>
+                            </div>
+                        </div>
+                        <div class="content">
+                            {{teacher.description}}
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
 {% endblock %}
+
+

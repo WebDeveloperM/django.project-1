@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Академия Monday - курсы по программированию и дизайну</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="{% static 'css/course.css' %}">
+    <!-- <link rel="stylesheet" href="{% static '/css/course.css' %}"> -->
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
 </head>
 <body>
 <section id="main" class="hero is-primary is-bold is-fullheight">
@@ -13,7 +14,7 @@
         <nav class="navbar">
             <div class="container">
                 <div class="navbar-brand">
-                    <a href="/home" class="navbar-item">
+                    <a href="{% url 'home' %}" class="navbar-item">
                         <img src="{% static 'images/monday.svg' %}" alt="Logo">
                     </a>
 
@@ -54,6 +55,7 @@
         </div>
     </div>
 </section>
+
 {% block content %}
 {% endblock %}
 <footer class="section">
